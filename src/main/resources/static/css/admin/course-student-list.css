@@ -1,0 +1,136 @@
+/* General Styles */
+h3 {
+    text-align: center;
+    font-size: 24px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.container {
+    width: 60vw; /* Match course list container width */
+    margin: auto; /* Center the container */
+}
+
+/* Table Styles */
+table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Ensure proper table formatting */
+}
+
+.short-col {
+    width: 80px;	
+}
+
+#add-button {
+    width: 100px;
+    line-height: 35px;
+    margin-top: 15px;
+}
+
+/* Button Styles */
+.button {
+    background-color: rgba(72, 209, 204, 1);
+    color: white; /* Ensure text is visible */
+    padding: 8px 12px; /* Adjusted for better appearance */
+    border-radius: 4px; /* Rounded corners */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    margin: 3px 0; /* Margin for buttons */
+}
+
+.button:hover {
+    background-color: rgba(72, 209, 204, 0.7); /* Hover effect */
+}
+
+/* Icon Visibility */
+td i {
+    display: none !important;    
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1000px) {
+    .short-col {
+        width: 40px; /* Adjust width for smaller screens */
+    }
+  
+    td i {
+        display: inline-block !important; /* Show icons on smaller screens */
+    }
+
+    td span {
+        display: none !important; /* Hide text on smaller screens */
+    }
+
+    table .button {
+        width: 30px; /* Adjust button width */
+        line-height: 30px; /* Align text vertically */
+    }
+}
+
+/* Sliding Navbar Styles */
+.vertical-navbar {
+    position: fixed; /* Keeps the navbar fixed on the left */
+    top: 0;
+    left: -250px; /* Hidden off-screen initially */
+    width: 250px; /* Adjust based on your design */
+    height: 100%;
+    background-color: rgba(244, 67, 54, 0.9);
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    transition: left 0.3s ease; /* Smooth transition for sliding */
+    z-index: 999; /* Ensure navbar is above other elements */
+}
+
+.vertical-navbar.open {
+    left: 0; /* Shows the navbar when active */
+}
+
+.vertical-navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.vertical-navbar li {
+    padding: 15px;
+    text-align: left;
+}
+
+/* Sliding Navbar Styles */
+.vertical-navbar {
+    position: fixed; /* Keeps the navbar fixed on the left */
+    top: 0;
+    left: -250px; /* Hidden off-screen initially */
+    width: 250px; /* Adjust based on your design */
+    height: 100%;
+    background-color: rgba(244, 67, 54, 0.9);
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    transition: left 0.3s ease; /* Smooth transition for sliding */
+    z-index: 999; /* Ensure navbar is above other elements */
+}
+
+.vertical-navbar.open {
+    left: 0; /* Shows the navbar when active */
+}
+
+/* Toggle Button */
+.toggle-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #333;
+}
+
+/* Other existing styles remain unchanged */
+
+/* Responsive Styles for Larger Screens */
+@media screen and (min-width: 1420px) {
+    table {
+        width: 80%; /* Adjust table width for larger screens */
+    }
+}

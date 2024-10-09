@@ -1,0 +1,123 @@
+/* teacher-list.css */
+
+/* General Styles */
+h3 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.container {
+    width: 60vw; /* Match course list container width */
+    margin: auto; /* Center the container */
+}
+
+/* Table Styles */
+table {
+    width: 100%; /* Use full width for consistency */
+    border-collapse: collapse; /* Ensure proper table formatting */
+}
+
+.short-col {
+    width: 15vw; /* Adjust for responsive design */
+    max-width: 200px; /* Set maximum width */
+}
+
+/* Icon Visibility */
+td i {
+    display: none !important;    
+}
+
+#alert {
+    margin-top: 20px;
+    color: #ff1616; /* Alert color */
+}
+
+/* Button Styles */
+.button {
+    background-color: rgba(72, 209, 204, 1);
+    color: white; /* Ensure text is visible */
+    padding: 8px 12px; /* Add padding for better appearance */
+    border-radius: 4px; /* Rounded corners */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    margin: 3px 0; /* Margin for buttons */
+}
+
+.button:hover {
+    background-color: rgba(72, 209, 204, 0.7); /* Hover effect */
+}
+
+/* Vertical Navbar Styles */
+.vertical-navbar {
+    position: fixed; /* Keeps the navbar fixed on the left */
+    top: 0;
+    left: -250px; /* Hidden off-screen */
+    width: 250px; /* Adjust based on your design */
+    height: 100%;
+    background-color: rgba(244, 67, 54, 0.9);
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    transition: left 0.3s ease; /* Smooth transition */
+    z-index: 999; /* Ensure navbar is above other elements */
+}
+
+.vertical-navbar.open {
+    left: 0; /* Shows the navbar when active */
+}
+
+.vertical-navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.vertical-navbar li {
+    padding: 15px;
+    text-align: left;
+}
+
+.vertical-navbar li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+/* Toggle Button */
+.toggle-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #333;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 900px) {
+    .short-col {
+        width: 60px; /* Adjust width for smaller screens */
+    }
+    
+    td i {
+        display: inline-block !important; /* Show icons on smaller screens */
+    }
+
+    td a span {
+        display: none !important; /* Hide text on smaller screens */
+    }
+
+    table .button {
+        width: 30px; /* Adjust button width */
+        line-height: 30px; /* Align text vertically */
+    }
+}
+
+@media screen and (min-width: 1420px) {
+    table {
+        width: 80%; /* Adjust table width for larger screens */
+    }
+}
+
+/* Additional styles for layout consistency */
